@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Cursos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="tag">MVP Evoluído</p>
+        <h1>Plataforma de Cursos Online</h1>
+        <p class="description">
+          Cadastre vários cursos e configure como cada um será avaliado e como a matéria vai seguir.
+        </p>
+        <button id="explorarCursos">Explorar cursos</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Cadastrar novo curso</h2>
+        <form id="cursoForm" class="curso-form">
+          <label>
+            Nome do curso
+            <input id="titulo" name="titulo" type="text" required />
+          </label>
+
+          <label>
+            Carga horária
+            <input id="carga" name="carga" type="text" placeholder="Ex: 24h" required />
+          </label>
+
+          <label>
+            Nível
+            <select id="nivel" name="nivel" required>
+              <option value="Iniciante">Iniciante</option>
+              <option value="Intermediário">Intermediário</option>
+              <option value="Avançado">Avançado</option>
+            </select>
+          </label>
+
+          <label>
+            Método de avaliação
+            <select id="avaliacao" name="avaliacao" required>
+              <option value="Quiz por módulo">Quiz por módulo</option>
+              <option value="Projeto prático">Projeto prático</option>
+              <option value="Prova final">Prova final</option>
+              <option value="Trabalho + participação">Trabalho + participação</option>
+            </select>
+          </label>
+
+          <label>
+            Sequência da matéria
+            <select id="progressao" name="progressao" required>
+              <option value="Linear (módulo a módulo)">Linear (módulo a módulo)</option>
+              <option value="Trilha flexível por tópicos">Trilha flexível por tópicos</option>
+              <option value="Por pré-requisitos">Por pré-requisitos</option>
+            </select>
+          </label>
+
+          <button type="submit">Salvar curso</button>
+        </form>
+      </section>
+
+      <section id="catalogoSection">
+        <h2>Cursos cadastrados</h2>
+        <p id="totalCursos" class="total"></p>
+        <div id="catalogo" class="grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
